@@ -5,10 +5,12 @@ export class Negociations {
 
   constructor() {}
 
+  //adiciona cada negociation em um array
   addNegociation(negociation: Negociation): number {
     return this.negociations.push(negociation);
   }
 
+  //lista negociations
   listNegociations(): Array<Negociation> {
     return this.negociations;
   }
