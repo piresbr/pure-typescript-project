@@ -13,6 +13,7 @@ export class NegociationController {
 
   createNegociation(): void {
     this.newNegociation();
+    this.resetFormNegociation();
   }
 
   newNegociation(): Negociation {
@@ -24,5 +25,13 @@ export class NegociationController {
     const negociation = new Negociation(date, quantity, valueMoney);
 
     return negociation;
+  }
+
+  resetFormNegociation(): void {
+    this.date.value = "";
+    this.quantity.value = "";
+    this.valueMoney.value = "";
+
+    this.date.focus();
   }
 }
