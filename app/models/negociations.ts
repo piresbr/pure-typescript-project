@@ -1,17 +1,15 @@
-import { Negociation } from "./negociation";
+import { Negociation } from "./negociation.js";
 
 export class Negociations {
-  private negociations: Array<Negociation> = [];
-
-  constructor() {}
+  private negociations: Negociation[] = [];
 
   //adiciona cada negociation em um array
-  addNegociation(negociation: Negociation): number {
-    return this.negociations.push(negociation);
+  addNegociation(negociation: Negociation) {
+    this.negociations.push(negociation);
   }
 
   //lista negociations
-  listNegociations(): Array<Negociation> {
+  listNegociations(): readonly Negociation[] {
     return this.negociations;
   }
 }

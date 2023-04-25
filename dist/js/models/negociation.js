@@ -1,19 +1,14 @@
 export class Negociation {
-    constructor(date, quantity, valueMoney) {
-        this._date = date;
-        this._quantity = quantity;
-        this._valueMoney = valueMoney;
-    }
-    get date() {
-        return this._date;
-    }
-    get quantity() {
-        return this._quantity;
-    }
-    get valueMoney() {
-        return this._valueMoney;
+    constructor(_date, quantity, valueMoney) {
+        this._date = _date;
+        this.quantity = quantity;
+        this.valueMoney = valueMoney;
     }
     get volume() {
-        return this._quantity * this._valueMoney;
+        return this.quantity * this.valueMoney;
+    }
+    get date() {
+        const date = new Date(this._date.getTime());
+        return date;
     }
 }
